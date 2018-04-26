@@ -33,6 +33,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// routes for api
+app.use('/api', apiRouter);
+
 // initialize express-session to allow us track the logged-in user across sessions.
 app.use(session({
     key: 'user_sid',
@@ -175,12 +178,6 @@ app.get('/settings', (req, res) => {
 app.use(function (req, res, next) {
     res.status(404).send("Sorry can't find that!")
 });
-
-
-
-
-// app.use('/', indexRouter);
-app.use('/api', apiRouter);
 
 
 
