@@ -173,6 +173,11 @@ app.get('/settings', (req, res) => {
     }
 });
 
+// avoids /favicon.ico 404 error
+app.get('/favicon.ico', function(req, res) {
+    res.status(204);
+});
+
 
 // route for handling 404 requests(unavailable routes)
 app.use(function (req, res, next) {
