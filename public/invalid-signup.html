@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <title>Login Here</title>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <!-- Avoid zooming -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+</head>
+
+
+<!-- <a href="/">Home</a>
+                        <a href="/signup">Sign Up</a>
+                        <a href="/dashboard">Dashboard</a>
+                        <a href="/login">Log In</a>
+                        <a href="/logout">Log Out</a> -->
+
+
+<body>
+    <nav class="blue">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo left">M2W</a>
+            <ul id="nav-mobile" class="right">
+                <li>
+                    <a href="/signup">Sign Up</a>
+                </li>
+                <li>
+                    <a href="/login">Log In</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br><br>
+
+    <div class="container">
+    
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card red white">
+                    <div class="card-content red-text">
+                        <span class="card-title">Error</span>
+                        <p>Username or email already used by someone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Sign up</h3>
+        <br>
+        <form action="/signup" method="post">
+            <div>
+                <label>Username:</label>
+                <input type="text" name="username" />
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="text" name="email" />
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" name="password" />
+            </div>
+            <br>
+            <div>
+                <input class="btn left" type="submit" value="Sign Up" />
+                <a href="/dashboard" class="btn red right">Got to the app ></a>
+            </div>
+        </form>
+    </div>
+
+    <br><br>
+
+    <footer class="page-footer blue">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h5 class="white-text">M2W</h5>
+                    <p class="grey-text text-lighten-4">"Message to the world" is an open platform where anyone can post a message that anybody will be able to see.
+                        This website is hosted on Heroku and uses Vue JS for the front-end and Express JS for the back end. You
+                        can find the source code on Github (see the link below).</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 Copyright Barthélémy Bulteau
+                <a class="grey-text text-lighten-4 right" href="#!">GitHub
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</body>
+
+</html>

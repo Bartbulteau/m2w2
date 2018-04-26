@@ -89,7 +89,7 @@ app.route('/signup').post((req, res) => {
         console.log(err)
         if (err) {
             console.log('there is an error');
-            res.redirect('/signup');
+            res.redirect('/signup/invalid');
         } else {
             req.session.user = user;
             res.redirect('/dashboard');
@@ -146,6 +146,10 @@ app.route('/login/invalid').get(sessionChecker, (req, res) => {
     res.sendFile(__dirname + '/public/invalid.html');
 });
 
+// /signup/invalid
+app.route('/signup/invalid').get(sessionChecker, (req, res) => {
+    res.sendFile(__dirname + '/public/invalid-signup.html');
+});
 
 // route for user's dashboard
 app.get('/dashboard', (req, res) => {
